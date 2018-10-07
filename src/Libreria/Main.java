@@ -19,7 +19,7 @@ public class Main {
      * @param isbn Define el isbn del libro a mostrar informacion 
      * @param tienda Define la tienda de la cual se obtendra la informacion
      */ 
-    static void informacionIsbn(String isbn,Tienda tienda){
+    public static void informacionIsbn(String isbn,Tienda tienda){
         if(tienda.informacionIsbn(isbn).getIsbn() ==  null){
            // System.out.println("el libro no existe");
            JOptionPane.showMessageDialog(null,"El lbro no existe");
@@ -33,7 +33,7 @@ public class Main {
      * @param nombre Define el nombre del libro a mostrar la informacion
      * @param tienda Define la tienda de la cual se obtendra la informacion
      */
-     static void informacionNombre(String nombre,Tienda tienda){
+     public static void informacionNombre(String nombre,Tienda tienda){
         if(tienda.informacionIsbn(nombre).getNombre() ==  null){
             //System.out.println("el libro no existe");
             JOptionPane.showMessageDialog(null,"El lbro no existe");
@@ -48,7 +48,7 @@ public class Main {
       * @param isbn Define el isbn de libro a vender
       * @param tienda Define la tienda de la cual se obtendra la informacion
       */
-    static void verificarVentaNuevo(int cantidad, String isbn, Tienda tienda){
+    public static void verificarVentaNuevo(int cantidad, String isbn, Tienda tienda){
         if(tienda.informacionIsbn(isbn).getCantidadNuevo()<cantidad){
             //System.out.println("No hay suficientes libros, la transaccion no puede ser realizada");
             //System.out.println("Del producto solo hay:    " + tienda.informacionIsbn(isbn).getCantidadNuevo()+ " libros nuevos       y       "  + tienda.informacionIsbn(isbn).getCantidadUsado()+"  libros usados");
@@ -65,7 +65,7 @@ public class Main {
       * @param isbn Define el isbn de libro a vender
       * @param tienda Define la tienda de la cual se obtendra la informacion
       */
-    static void verificarVentaUsado(int cantidad, String isbn, Tienda tienda){
+    public static void verificarVentaUsado(int cantidad, String isbn, Tienda tienda){
         if(tienda.informacionIsbn(isbn).getCantidadUsado()<cantidad){
            // System.out.println("No hay suficientes libros, la transaccion no puede ser realizada");
             //System.out.println("Del producto solo hay:    " + tienda.informacionIsbn(isbn).getCantidadNuevo()+ " libros nuevos       y       "  + tienda.informacionIsbn(isbn).getCantidadUsado()+"  libros usados");
